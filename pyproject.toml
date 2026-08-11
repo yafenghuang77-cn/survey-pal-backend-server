@@ -1,0 +1,12 @@
+[project]
+name = "survey-pal-backend-server"
+version = "0.1.0"
+description = "Survey Pal backend API server"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "fastapi[standard-no-fastapi-cloud-cli]>=0.141.1",
+]
+
+[tool.fastapi]
+entrypoint = "main:app"
