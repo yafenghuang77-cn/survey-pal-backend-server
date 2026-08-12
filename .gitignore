@@ -1,34 +1,117 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+
 # Virtual environments
 .venv/
 venv/
 env/
+ENV/
+.Python
 
-# Python cache
-__pycache__/
-*.py[cod]
+# uv
+.uv_cache/
+uv.lock.~*
 
-# Test and quality caches
+# Testing
 .pytest_cache/
-.mypy_cache/
-.ruff_cache/
 .coverage
+.coverage.*
 htmlcov/
+.tox/
+.hypothesis/
+*.cover
+.cache
 
-# Build output
-build/
-dist/
-*.egg-info/
+# Type checking and linting
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # Environment and secrets
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+secrets/
+*.secret
 
 # Logs
 *.log
 logs/
+*.log.*
 
-# IDE and operating system files
-.idea/
-.vscode/
-.DS_Store
+# Database
+*.db
+*.sqlite
+*.sqlite3
+db.sqlite3
+pgdata/
+postgres-data/
+
+# Alembic
+alembic/versions/*.pyc
+alembic/versions/__pycache__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Redis
+dump.rdb
+
+# Docker
+.dockerignore.bak
+docker-compose.override.yml
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+.~*
+
+# Reports and exports (业务生成的报表文件)
+reports/
+exports/
+uploads/
+
+# Monitoring and profiling
+*.prof
+.profiling/
+
+# Documentation build output
+docs/_build/
+docs/.doctrees/
+site/

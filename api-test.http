@@ -1,0 +1,51 @@
+### 调研宝后端 API 测试接口集合
+### 使用 VS Code REST Client 或 IntelliJ IDEA HTTP Client 运行
+
+@baseUrl = http://localhost:8000
+
+### 1. 健康检查 - 存活探针
+GET {{baseUrl}}/health/live
+
+### 2. 健康检查 - 就绪探针
+GET {{baseUrl}}/health/ready
+
+### 3. 基础服务测试
+GET {{baseUrl}}/api/v1/test
+
+### 4. 版本信息
+GET {{baseUrl}}/api/v1/version
+
+### 5. 回显接口 - 测试请求体解析
+POST {{baseUrl}}/api/v1/echo
+Content-Type: application/json
+
+{
+  "message": "Hello, Survey Pal!"
+}
+
+### 6. 分页列表 - 第1页
+GET {{baseUrl}}/api/v1/list?page=1&page_size=10
+
+### 7. 分页列表 - 第2页
+GET {{baseUrl}}/api/v1/list?page=2&page_size=20
+
+### 8. 错误响应演示 - 参数校验失败
+GET {{baseUrl}}/api/v1/error-demo?code=10001
+
+### 9. 错误响应演示 - Token 过期
+GET {{baseUrl}}/api/v1/error-demo?code=11002
+
+### 10. 错误响应演示 - 权限不足
+GET {{baseUrl}}/api/v1/error-demo?code=11003
+
+### 11. 错误响应演示 - 内部服务器错误
+GET {{baseUrl}}/api/v1/error-demo?code=50000
+
+### 12. 全局异常处理器测试
+GET {{baseUrl}}/api/v1/exception-demo
+
+### 13. OpenAPI 文档
+GET {{baseUrl}}/docs
+
+### 14. Prometheus 指标
+GET {{baseUrl}}/metrics
